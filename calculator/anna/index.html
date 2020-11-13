@@ -1,56 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+      #ecriture {
+        border: solid 2px white;
+        color: black;
+        padding: 40px;
+        margin: 30px;
+        font-size: 60px;
+        font-weight: 1000;
+      }
+    </style>
 
-  <title></title>
-  <style type="text/css">
-    #ecriture {
-      border: solid 2px white;
-      color: black;
-      padding: 40px;
-      margin: 30px;
-      font-size: 60px;
-      font-weight: 1000;
-    }
-  </style>
+    <script>
+      function calculResultat() {
+        var n1 = document.getElementById("nombr1").value;
+        var n2 = document.getElementById("nombr2").value;
+        document.getElementById("resultat").value = Number(n1) - Number(n2);
+      }
 
-  <script>
-    function calculResultat() {
-      var n1 = document.getElementById('nombr1').value;
-      var n2 = document.getElementById('nombr2').value;
-      document.getElementById("resultat").value = Number(n1)-Number(n2);
-    }
+      function chargement() {}
 
-    function chargement() {
+      function ecrire(texte) {
+        const domEcriture = document.getElementById("ecriture");
+        domEcriture.innerHTML += texte + "<br>";
+      }
+    </script>
+  </head>
 
-    }
+  <body onload="chargement()">
+    <div id="ecriture">Calculatrice de Anna</div>
 
-    function ecrire(texte) {
-      const domEcriture = document.getElementById('ecriture');
-      domEcriture.innerHTML += texte + '<br>'
-    }
-
-  </script>
-
-</head>
-
-<body onload="chargement()">
-  <div id="ecriture">
-          Calculatrice de Anna
-  </div>
-
-  <input id="nombr1" type="text"></input>
-  - + *
-  <input id="nombr2" type="text"></input>
-  <button onclick="calculResultat()">
-    =
-  </button>
-  <input id="resultat" type="text" readonly></input>
-
-</body>
-
+    <input id="nombr1" type="text" />
+    - + *
+    <input id="nombr2" type="text" />
+    <button onclick="calculResultat()">=</button>
+    <input id="resultat" type="text" readonly />
+  </body>
 </html>
