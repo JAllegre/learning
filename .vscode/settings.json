@@ -1,2 +1,11 @@
 {
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "typescript.validate.enable": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
